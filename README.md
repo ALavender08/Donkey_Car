@@ -27,7 +27,7 @@
 ```python
 if abs(self.speed) < self.min_speed and self.n_steps > 100:
     self.n_steps_low_speed +=1
-    if self.n_steps_low_speed > 60:
+    if self.n_steps_low_speed > 30:
 	self.over = True
 else:
     self.n_steps_low_speed = 0
@@ -35,8 +35,9 @@ else:
 - 自行改寫環境  
 （在 observe (每一步的回傳函式) 下新增以下程式，在原本獎勵機制基礎上，給予慢速車懲罰與開很遠獎勵）
 ```python
+reward = self.calc_reward(done) * 1.5
 if self.speed < self.min_speed: 
-    reward -= 1
+    reward -= 3
 reward += 0.002*self.n_steps
 ```
 - 訓練 PPO 模型
