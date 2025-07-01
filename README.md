@@ -33,7 +33,7 @@ else:
     self.n_steps_low_speed = 0
 ```
 - 自行改寫環境  
-（在 observe (每一步的回傳函式) 下新增以下程式，在原本獎勵機制基礎上，加上給予慢速車的懲罰與車開很遠的獎勵）
+（在 observe (每一步的回傳函式) 下新增以下程式，在原本獎勵機制基礎上，給予慢速車懲罰與開很遠獎勵）
 ```python
 if self.speed < self.min_speed: 
     reward -= 1
