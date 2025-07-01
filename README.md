@@ -19,3 +19,24 @@
 6/30 進度：
 - 按照[影片](https://www.youtube.com/watch?v=ngK33h00iBE)步驟，改套用 rl baselines3 zoo 建模型  
 （目前[影片](https://www.youtube.com/watch?v=ngK33h00iBE)進度到 42:55，準備改超參數）
+---
+7/1 進度：
+- 套用 rl baselines3 zoo 建模型失敗，維持使用自己寫的程式訓練
+- 參考[影片](https://www.youtube.com/watch?v=ngK33h00iBE) 00:51:36 ~ 01:00:30，修改環境  
+（在 determine_episode_over (確認回合是否結束函式) 下新增以下程式，用以判斷車子是否停在一地或幾乎停住）
+```python
+if abs(self.speed) < self.min_speed and self.n_steps > 100:
+    self.n_steps_low_speed +=1
+    if self.n_steps_low_speed > 60:
+	self.over = True
+else:
+    self.n_steps_low_speed = 0
+```
+- 自行改寫環境  
+（在 observe (每一步的回傳函式) 下新增以下程式，在原本獎勵機制基礎上，加上給予慢速車的懲罰與車開很遠的獎勵）
+```python
+if self.speed < self.min_speed: 
+    reward -= 1
+reward += 0.002*self.n_steps
+```
+- 訓練 PPO 模型
