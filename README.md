@@ -60,3 +60,6 @@ reward += 0.002*self.n_steps
 - 撰寫報告（全）
 - 製作模型實際跑賽道的影片
 - 嘗試調整參數，改進 TD3、SAC（失敗）
+---
+7/5
+- 整理並上傳檔案至 GitHub、Google Drive
