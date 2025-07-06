@@ -1,3 +1,4 @@
+**目前 GitHub 上只有 PPO 的訓練模型與測試獎勵紀錄，其餘壓縮檔請見雲端資料夾**
 ## PPO2
 ```python
 PPO("CnnPolicy", env, n_steps=500, verbose=0, learning_rate=0.0003*0.1 )
