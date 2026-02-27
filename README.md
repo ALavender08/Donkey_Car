@@ -62,3 +62,8 @@ lr = 0.00003 的模型訓練到在 22500 步時即訓練完成（可連續跑 >1
 在本次研究中，我曾使用 TD3、SAC 兩種演算法訓練模型，但 10 萬回合後其模型仍無法完整駛完一圈賽道。由於有調整過學習率使 PPO 模型更好先例，並發現在 stable baseline3 若要分別調整 Actor、Critic 的學習率可以客製化策略，這是可以投入更多研究去確認能否改進模型的一項變因。  
 再者，從 SAC 的測試獎勵有逐步上升趨勢，推測兩演算法模型表現不如 PPO 的另一種可能原因為訓練回合不夠，而此兩種演算法的學習速度較慢，可能需要訓練至百萬回合才有能力穩定完成賽道。  
 此外，獎勵也是影響訓練的一大因素。從[參考資料](https://towardsdatascience.com/suicidal-rl-agents-68159fc8f15a/)中得知，若 Agent 認為所得到的獎勵皆是負面的，可能會傾向學習自殺，以避免累積過多負面獎勵。而從另一[參考資料](https://www.reddit.com/r/reinforcementlearning/comments/1d8r7kz/my_td3_keep_suiciding_even_if_the_reward_is_worse/)中的討論得知可以試著修改環境，使獎勵乘上某個倍數，讓獎勵、懲罰的意義更明確，也能改進前一則資料所說的模型自毀行為，但實際的獎勵修改數值仍需後續實驗釐清。
+
+## 附錄
+- [研究報告](https://docs.google.com/document/d/1ZucsytjTjjlciN-wpHwn7taSAWhV_F93/edit?usp=sharing&ouid=116693472986107286060&rtpof=true&sd=true)
+- [雲端資料夾（存放研究報告、分數折現圖、SAC & TD3模型、第一視角模型執行成果影片）](https://drive.google.com/drive/folders/1D9AbS5dj5ZhpvmzaS_2PAUA1tgqqT-5l?usp=drive_link)
+- [研究時筆記](https://docs.google.com/document/d/156_-ESvBjmCfHAaZ1IflRwx6XCRnGf3u4RhfXAledQw/edit?pli=1&tab=t.xx4ufiyx847j#heading=h.am3mvux25hyk)
