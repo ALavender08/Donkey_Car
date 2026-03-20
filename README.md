@@ -65,5 +65,5 @@ lr = 0.00003 的模型訓練到在 22500 步時即訓練完成（可連續跑 >1
 
 ## 附錄
 - [研究報告](https://docs.google.com/document/d/1ZucsytjTjjlciN-wpHwn7taSAWhV_F93/edit?usp=sharing&ouid=116693472986107286060&rtpof=true&sd=true)
-- [雲端資料夾（存放研究報告、分數折現圖、SAC & TD3模型、第一視角模型執行成果影片）](https://drive.google.com/drive/folders/1D9AbS5dj5ZhpvmzaS_2PAUA1tgqqT-5l?usp=drive_link)
+- [雲端資料夾（存放研究報告、分數折現圖、第一視角模型執行成果影片）](https://drive.google.com/drive/folders/1D9AbS5dj5ZhpvmzaS_2PAUA1tgqqT-5l?usp=drive_link)
 - [研究時筆記](https://docs.google.com/document/d/156_-ESvBjmCfHAaZ1IflRwx6XCRnGf3u4RhfXAledQw/edit?pli=1&tab=t.xx4ufiyx847j#heading=h.am3mvux25hyk)
